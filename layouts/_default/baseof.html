@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        {{ if ne .Title .Site.Title }}
+        {{ .Site.Title }} {{ .Title }}
+        {{ else }}
+        {{ .Site.Title }}
+        {{ end }}
+        </title>
+        <!-- CSS -->
+        {{ $cssOpts := (dict "targetPath" "styles/main.css" ) }}
+        {{ $styles := resources.Get "scss/styles.scss" | toCSS }}
+        <link rel="stylesheet" href="{{ $styles.Permalink }}">
+        <!-- Favicon -->
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+        <!-- Font -->
+        <!-- Javascript -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    </head>
+    <!-- Navbar -->
+    {{ partial "site-header" . }}
+    <body>
+        <!-- Content from other templates -->
+        {{ block "main" . }}
+        {{ end }}
+        <!-- Footer -->
+        {{ partial "footer" . }}
+    </body>
+</html>

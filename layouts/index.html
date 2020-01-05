@@ -1,0 +1,107 @@
+{{ define "main" }}
+<div class="home-hero bg-color-med-blue" style="background-image: url('images/heroes/hero-octant.svg')">
+    <div class="section">
+      <div class="section-content">
+        <div class="hero-content">
+          <h1 class="mb-3">Visualize your Kubernetes workloads</h1>
+          <p>Octant is an open source developer-centric web interface for Kubernetes that lets you inspect a Kubernetes cluster and its applications.
+        </p>        
+        </div>
+        <div class="hero-cta mt-4">
+          <a href="/docs/" class="btn btn-primary mb-3 mb-sm-0">Latest Release Information</a>
+          <a href="https://github.com/vmware-tanzu/octant/releases/latest" class="btn btn-outline-light">Download Octant</a>
+        </div>
+      </div>
+    </div>
+</div> <!-- /home-hero -->
+  <div class="section section-card section-card-offset-top promo-cards">
+    <div class="section-content">
+      <div class="row">
+        <div class="col-md">
+          <div class="card card-light mb-3 mb-md-0 shadow-sm">
+            <div class="card-body match-height">
+              <figure>
+                <img src="/images/icon-visualization.svg" alt="Visualization" />
+              </figure>
+              <h5>Visualization</h5>
+              <p>Provide a visual interface to managing Kubernetes that complements and extends existing tools like kubectl and kustomize.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card card-light mb-3 mb-md-0 shadow-sm">
+            <div class="card-body match-height">
+              <figure>
+                <img src="/images/icon-extensibility.svg" alt="Extensibility" />
+              </figure>
+              <h5>Extensibility</h5>
+              <p>Provide a visual interface to managing Kubernetes that complements and extends existing tools like kubectl and kustomize.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card card-light mb-3 mb-md-0 shadow-sm">
+            <div class="card-body match-height">
+              <figure>
+                <img src="/images/icon-versatility.svg" alt="Versatility" />
+              </figure>
+              <h5>Versatility</h5>
+              <p>Support a variety of debugging features such as filtering labels and streaming container logs to be part of the Kubernetes development toolkit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-grey">
+    <div class="section-content">
+      <div class="row bg-grey">
+        <div class="col-sm-5 mb-3 mb-sm-0">
+          <h6 class="mb-1">
+            <a href="/octant-reveals-objects-running-in-kubernetes-clusters">Introduction to Octant</a>
+          </h6>
+          <p class="mb-0">Learn about why Octant was created and how it aims to improve upon past attempts to create a Kubernetes dashboard.</p>
+        </div>
+        <div class="col-sm-5 offset-sm-2">
+          <h6 class="mb-1">
+            <a href="https://www.youtube.com/watch?v=D5PLsXP9aPc">Octant Webinar - Sept 18, 2019</a>
+          </h6>
+          <p class="mb-0">Learn how to use Octant in your environment to better understand the state of the applications running inside the cluster.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <div class="section-content">
+      <div class="row">
+        <div class="col">
+          <h2>Features</h2>
+        </div>          
+      </div>
+      {{ partial "case-studies-alternating" . }}
+    </div>
+  </div>
+  
+  <div class="section pt-3">
+    <div class="section-content">
+      <div class="row">
+        <div class="col">
+          <h2>Blog Highlights</h2>        
+        </div>
+      </div>
+      {{ partial "blog-posts" . }}
+      <div class="row pt-5">
+        <div class="col text-center">
+          <a href="/blog" class="btn btn-secondary btn-sm">See All Posts</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section section-background-dark-blue">
+    <div class="section-content">
+      {{ partial "contributors" . }}
+    </div>
+  </div>  
+{{ end }}

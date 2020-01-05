@@ -1,0 +1,29 @@
+<div class="alternating-cards">
+  {{ range $index, $element := .Site.Data.case_studies }}
+    {{ if (eq (mod $index 2) 0 )}}
+      <div class="row no-gutters align-items-center">
+        <div class="order-xs-first col-md-3 match-height icon bg-color-med-blue order-md-first">
+          <img src="{{ .icon }}" alt="{{ .title }}"/>
+        </div>
+        <div class="order-xs-last col-md-9 order-md-last">
+          <div class="card-body">
+            <h5 class="card-title">{{ .title }}</h5>
+            <p class="card-text">{{ .content | markdownify }}</p>
+          </div>
+        </div>
+      </div>
+    {{ else }}
+    <div class="row no-gutters align-items-center">
+      <div class="order-xs-first col-md-3 match-height icon bg-color-med-blue order-md-last">
+        <img src="{{ .icon }}" alt="{{ .title }}"/>
+      </div>
+      <div class="order-xs-last col-md-9 order-md-first">
+        <div class="card-body">
+          <h5 class="card-title">{{ .title }}</h5>
+          <p class="card-text">{{ .content | markdownify }}</p>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  {{ end }}
+</div>

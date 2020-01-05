@@ -1,0 +1,9 @@
+- title: Port forward
+  icon: /images/case-study-icons/icon-port-forward.svg
+  content: Debug applications running on a cluster in a local environment by creating port forwards through an intuitive interface.
+- title: Real-time updates
+  icon: /images/case-study-icons/icon-kubernetes.svg
+  content: With a complete view of an object and all its related objects, you can more accurately assess the status of applications and avoid unfocused debugging when things go wrong.
+- title: Plug-ins over gRPC
+  icon: /images/case-study-icons/icon-plugins.svg
+  content: With Octant’s plug-in API, core features can be extended to meet the needs of customized workflows on a cluster.

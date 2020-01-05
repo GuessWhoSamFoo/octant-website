@@ -1,0 +1,17 @@
+baseURL = "https://octant.dev"
+languageCode = "en-us"
+title = "Octant"
+
+contentDir = "content"
+
+enableGitInfo = true
+
+[params]
+  description = "Validate your Kubernetes configuration"
+  slack = "https://kubernetes.slack.com/app_redirect?channel=CM37M9FCG"
+  github = "https://github.com/vmware-tanzu/octant"
+  twitter = "https://twitter.com/projectoctant"
+  rss = "/feed.xml"
+
+[permalinks]
+  posts = "/:filename"
