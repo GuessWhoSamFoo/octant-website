@@ -21,13 +21,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
     </head>
-    <!-- Navbar -->
-    {{ partial "site-header" . }}
     <body>
+      <div class="container-fluid site-outer-container">
+        <div class="site-container">
+        <!-- Navbar -->
+        {{ partial "site-header" . }}
         <!-- Content from other templates -->
         {{ block "main" . }}
         {{ end }}
         <!-- Footer -->
         {{ partial "footer" . }}
+        </div>
+      </div>
     </body>
 </html>

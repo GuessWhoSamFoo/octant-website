@@ -15,3 +15,25 @@ enableGitInfo = true
 
 [permalinks]
   posts = "/:filename"
+
+[menu]
+  [[menu.nav]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.nav]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 2
+  [[menu.nav]]
+    name = "Community"
+    url = "/community/"
+    weight = 3
+  [[menu.nav]]
+    name = "Documentation"
+    url = "/docs/"
+    weight = 4
+  [[menu.nav]]
+    name = "Resources"
+    url = "/resources/"
+    weight = 5

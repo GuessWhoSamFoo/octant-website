@@ -1,45 +1,45 @@
 {{ define "main" }}
-      <div class="post-single-hero bg-color-med-blue"> 
-        <div class="section">
-          <div class="section-content">
-            <h1>{{ $.Title }}</h1>
+<div class="post-single-hero bg-color-med-blue"> 
+  <div class="section">
+    <div class="section-content">
+      <h1>{{ $.Title }}</h1>
+    </div>
+  </div>
+</div>
+<div class="post-single-body">
+  <div class="section section-card">
+    <div class="section-content pt-4 pb-0">
+      <div class="post-single-meta">
+        <div class="post-single-meta-author">
+          {{ if $.Params.author_avatar }}
+          <div class="post-single-meta-author-avatar">
+            <img src="{{ $.Params.author_avatar }}" alt="{{ $.Params.author_name }}">
+          </div>
+          {{ end }}
+          <div class="post-single-meta-author-name">
+            {{ if $.Params.author_url }}
+            <a href="{{ $.Params.author_url }}">{{ $.Params.author_name }}</a>
+            {{ else }}
+            <a href="/tags/{{ $.Params.author_name }}">{{ $.Params.author_name }}</a>
+            {{ end }}
           </div>
         </div>
-      </div>
-      <div class="post-single-body">
-        <div class="section section-card">
-          <div class="section-content pt-4 pb-0">
-            <div class="post-single-meta">
-              <div class="post-single-meta-author">
-                {{ if $.Params.author_avatar }}
-                <div class="post-single-meta-author-avatar">
-                  <img src="{{ $.Params.author_avatar }}" alt="{{ $.Params.author_name }}">
-                </div>
-                {{ end }}
-                <div class="post-single-meta-author-name">
-                  {{ if $.Params.author_url }}
-                  <a href="{{ $.Params.author_url }}">{{ $.Params.author_name }}</a>
-                  {{ else }}
-                  <a href="/tags/{{ $.Params.author_name }}">{{ $.Params.author_name }}</a>
-                  {{ end }}
-                </div>
-              </div>
 
-              <div class="post-single-meta-date">
-                {{ .PublishDate.Format "January 2, 2006" }}
-              </div>
-            </div>
-          
-            <div class="post-single-content">
-              {{ .Content }}
-            </div>
-          </div>
+        <div class="post-single-meta-date">
+          {{ .PublishDate.Format "January 2, 2006" }}
         </div>
       </div>
-
-      <div class="section pt-3">
-        <div class="section-content section-content-thin">
-          {{ partial "related-posts" . }}
-        </div>
+    
+      <div class="post-single-content">
+        {{ .Content }}
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="section pt-3">
+  <div class="section-content section-content-thin">
+    {{ partial "related-posts" . }}
+  </div>
+</div>
 {{ end }}

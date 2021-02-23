@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resouces
+title: Resources
 description: Octant Resouces
 # Something here for RSS
 ---

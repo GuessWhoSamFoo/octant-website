@@ -1,20 +1,16 @@
 {{ define "main" }}
-  <div class="container-fluid site-outer-container">
-    <div class="site-container">
-      <div class="post-single-hero bg-color-med-blue">
-        <div class="section">
-            <div class="section-content">
-            <h1>{{ .Title }}</h1>
-            </div>
-        </div>
+<div class="post-single-hero bg-color-med-blue">
+  <div class="section">
+      <div class="section-content">
+      <h1>{{ .Title }}</h1>
       </div>
-        <div class="post-single-body">
-        <div class="section section-card">
-            <div class="section-content pt-4 pb-0">
-            {{ .Content }}
-            </div>
-        </div>
-        </div>
-    </div>
+  </div>
+</div>
+  <div class="post-single-body">
+  <div class="section section-card">
+      <div class="section-content pt-4 pb-0">
+      {{ .Content }}
+      </div>
+  </div>
   </div>
 {{ end }}
